@@ -1,98 +1,77 @@
-
 <!DOCTYPE html>
-<html lang="en"><head>
-<link rel="icon" href="https://img.telemetr.io/c/21NqKg/6289829157038832919?ty=l" type="image/gif" sizes="16x16">  
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <marquee><strong style="color: whitesmoke;">
-        <h></h>𝐖𝐀𝐈𝐓 𝟑𝟎 𝐒𝐄𝐂 𝐓𝐎 𝐋𝐎𝐀𝐃 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐏𝐑𝐎𝐏𝐄𝐑𝐋𝐘 🔥🔥 [𝐌𝐔𝐒𝐓 𝐉𝐎𝐈𝐍 𝐎𝐔𝐑
-        𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐅𝐎𝐑 𝐌𝐎𝐑𝐄 𝐔𝐏𝐃𝐀𝐓𝐄𝐒]</h><a href="https://t.me/+CkI-X6RgRo1jYTZl">
-          @kashurflix_playlists</a>
-      </strong><a href="https://t.me/+CkI-X6RgRo1jYTZl">
-      </a></marquee>
+    <meta name="referrer" content="no-referrer">
+    <title>CricketxHype</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.5.0/shaka-player.ui.min.js" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.5.0/controls.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
 
-    <title>LOVE FROM KASHMIR</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+</head>
+<body bgcolor='black' margin:0'>
+
+    <center>
+            <div data-shaka-player-container style='width: 100%; height: 100%'>
+            <video poster="logo.jpg" autoplay data-shaka-player id='video' style='width:100%;height:100%;'></video>
+        </div>
+    </center>
+    <script>
+        const manifestUri = "https://linear-novi.stvacdn.spectrum.com/LIVE/5248/bpk-tv/10364/drm/manifest.mpd";
+        async function init() {
+            const video = document.getElementById('video');
+            const ui = video['ui'];
+            const controls = ui.getControls();
+            const player = controls.getPlayer();
+            window.player = player;
+            window.ui = ui;
+            player.configure({
+                drm: {
+                    "clearKeys": {
+                    /*Key ID*/
+    '475d7932b5f352bb92016b75b60c58fa': 
+                      /*Key*/
+      'ea37faa137ae8f644105c4fcc189a35f'
+                    }
+                }
+            });
+            player.addEventListener('error', onPlayerErrorEvent);
+            controls.addEventListener('error', onUIErrorEvent);
+            try {
+                await player.load(manifestUri);
+                console.log('The video has now been loaded!');
+            } catch (error) {
+                onPlayerError(error);
+        }}
+
+        function onPlayerErrorEvent(errorEvent) {
+            onPlayerError(event.detail);
         }
 
-        .header {
-            margin-top: 20px;
-            text-align: center;
+        function onPlayerError(error) {
+            console.error('Error code', error.code, 'object', error);
         }
 
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            margin-top: 20px; /* Gap from the top */
+        function onUIErrorEvent(errorEvent) {
+            onPlayerError(event.detail);
         }
 
-        .glowing-border {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            outline: 5px solid rgba(255, 255, 255, 0.5);
-            outline-offset: -10px;
-            transition: box-shadow 0.3s ease-in-out;
+        function initFailed(errorEvent) {
+            console.error('Unable to load the UI library!');
         }
+        document.addEventListener('shaka-ui-loaded', init);
+        document.addEventListener('shaka-ui-load-failed', initFailed);
 
-        .glowing-border:hover {
-            box-shadow: 0 0 30px rgba(255, 255, 255, 1);
-        }
+   var a = confirm("Join For More Links!!");
 
-        .telegram-link {
-            margin-top: 20px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #0088cc;
-            padding: 10px 20px;
-            border: 2px solid #0088cc;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .telegram-link:hover {
-            color: white;
-            border-color: white;
-            box-shadow: 0 0 10px #0088cc, 0 0 20px #0088cc, 0 0 30px #0088cc;
-        }
-    </style>
-
-
-    <div class="header">
-        <h1>STAR SPORTS HINDI<h2>BY KASHURFLIX</h2></h1  >
-    </div>
-    <div class="video-container">
-        <iframe class="glowing-border" src="https://crictk.github.io/Hindii" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <a class="telegram-link" href="https://t.me/kashurflix_playlists" target="_blank">Join our Telegram Channel</a>
-
-  <script type="text/JavaScript">
-
-       // alert('Join Our Telegram For Latest update')
-         if (confirm("Join Our Telegram Channel For Latest Update") == true) {
-         window.open("https://t.me/+CkI-X6RgRo1jYTZl", '_blank');
-     }
-
-     
-</script>
-
-<iframe src="https://bwidget.crictimes.org/" style="width:100%;min-height: 250px;" frameborder="0" scrolling="yes"></iframe>
-
-<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
-
-
-</head><body><script type="text/javascript"> let WapkaSiteAPI = {"apikey": "85524:52358v9ro5abuu6r7qajjbo60e"} </script><script async type="text/javascript" src="//adstook.com/wapka_lib.js"></script></body>   </html>
+if(a==true){
+  window.location.href = "https://telegram.me/CricketxHype";
+}
+      
+      function welcome(){
+ window.open("https://telegram.me/CricketxHype")
+      }
+    </script>
+</body>
+</html>
